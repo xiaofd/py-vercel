@@ -1,6 +1,7 @@
 import os
 from dotenv import load_dotenv
 
+from fastapi import FastAPI
 # 加载.env文件中的环境变量（如果存在）
 load_dotenv()
 
@@ -10,3 +11,5 @@ db_port = os.getenv('DB_PORT', '5432')
 
 print(api_key)
 print(db_port)
+
+app = FastAPI()
