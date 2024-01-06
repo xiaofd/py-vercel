@@ -13,3 +13,7 @@ print(api_key)
 print(db_port)
 
 app = FastAPI()
+
+@app.get('/')
+def getroot():
+    return {'key':api_key,'num':db_port}
