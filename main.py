@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse  
+from fastapi.staticfiles import StaticFiles
 # 加载.env文件中的环境变量（如果存在）
 load_dotenv()
 
