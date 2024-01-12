@@ -16,7 +16,7 @@ print(api_key)
 print(db_port)
 
 app = FastAPI()
-app.mount("/dist", StaticFiles(directory="dist"), name="static")
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 @app.get('/one')
 def getroot():
