@@ -24,6 +24,6 @@ def getroot():
 
 @app.get('/',response_class=HTMLResponse)
 def getone():
-    with open('dist/index.html','rb') as f:
+    with open('static/index.html','rb') as f:
         data = f.read()
         return data
