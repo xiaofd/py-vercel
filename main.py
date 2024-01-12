@@ -18,11 +18,11 @@ print(db_port)
 app = FastAPI()
 app.mount("/dist", StaticFiles(directory="dist"), name="static")
 
-@app.get('/')
+@app.get('/one')
 def getroot():
     return {'key':api_key,'num':db_port}
 
-@app.get('/one',response_class=HTMLResponse)
+@app.get('/',response_class=HTMLResponse)
 def getone():
     with open('dist/index.html','rb') as f:
         data = f.read()
